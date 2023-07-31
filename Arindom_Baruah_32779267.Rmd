@@ -1,0 +1,62 @@
+---
+title: The Global War \newline Against  Cancer\huge
+author:
+- familyname: Baruah
+  othernames: Arindam
+  qualifications: abar0090@student.monash.edu
+
+email: 
+phone: 
+department: Department of\newline Econometrics &\newline Business Statistics
+organization: ETC 5513 Assignment 2
+bibliography: references.bib
+biblio-style: authoryear-comp
+linestretch: 1.5
+output:
+  monash::report:
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 8
+    includes:
+      in_header: preamble.tex
+    keep_tex: yes
+    number_sections: yes
+    citation_package: biblatex
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE, message=FALSE, warning=FALSE)
+```
+
+```{r libraries}
+
+library(ggplot2)
+library(knitr)
+library(tidyverse)
+library(ggthemes)
+library(kableExtra)
+library(here)
+library(rmarkdown)
+library(knitr)
+library(readr)
+library(dplyr)
+library(sf)
+library(ggrepel)
+library(stringr)
+library(scales)
+
+```
+
+
+```{r read-data}
+df_present <- read_csv("data/present.csv")
+df_arb <- read_csv("data/arbuthnot.csv")
+```
+
+# Introduction
+
+The current study delineates a detailed analysis of the birth counts for boys and girls born in the country of The United States of America. The study is based on two separate datasets, the first of which contain gender wise birth data from the years of 1629 to 1710 and the second, containing the gender birth data from the years of 1940 to 2002. Utilisation of statistical techniques and subsequent feature engineering of the current and the historical data would further allow us to uncover key insights into the changes of gender birth rate in the country.
+
+
+
