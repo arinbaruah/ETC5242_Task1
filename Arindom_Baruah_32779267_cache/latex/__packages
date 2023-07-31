@@ -16,3 +16,4 @@ rmarkdown
 sf
 ggrepel
 scales
+cowplot
