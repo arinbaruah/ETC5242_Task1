@@ -1,9 +1,9 @@
 ---
-title: The Global War \newline Against  Cancer\huge
+title: Gender birth rate trend analysis \newline in the United States\huge
 author:
 - familyname: Baruah
   othernames: Arindam
-  qualifications: abar0090@student.monash.edu
+  qualifications: abar0090@student.monash.edu (32779267)
 
 email: 
 phone: 
@@ -142,3 +142,20 @@ plot_grid(pl1, pl2, labels = "AUTO", ncol = 1)
 \normalsize
 
 As we can observe through figure \ref{fig:figbirth}, the magnitude of births are observed to be __significantly higher during the period between 1940-2002__ when compared to the period between 1620-1710.
+
+## Query 2
+
+In this section, the number of births classified as "girls" will be focused on to gain further insights.
+
+\scriptsize
+```{r girlbirth,fig.cap="Girls born during each period in the US",fig.align='center',echo=TRUE,include=TRUE}
+pl3 <- ggplot(data = df_present, aes(x = year, y = girls)) +
+  geom_point(shape = 2, color = 'red') + theme_classic() + ggtitle("Number of girls born during 1940-2002 \n in the US") + 
+  theme(plot.title = element_text(hjust = 0.5), aspect.ratio = 0.5) + labs(x = "Year", y = "Number of births")
+pl4 <- ggplot(data = df_arb, aes(x = year, y = girls)) +
+  geom_point(shape = 2, color = 'blue') + theme_classic() + ggtitle("Number of girls born during 1629-1710 \n in the US") + 
+  theme(plot.title = element_text(hjust = 0.5), aspect.ratio = 0.5) + labs(x = "Year", y = "Number of births")
+plot_grid(pl3,pl4,ncol =1)
+```
+
+

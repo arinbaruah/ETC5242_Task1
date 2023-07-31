@@ -21,7 +21,7 @@
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \usepackage[unicode=true]{hyperref}
 \hypersetup{
-            pdftitle={The Global War Against Cancer},
+            pdftitle={Gender birth rate trend analysis in the United States},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -89,7 +89,7 @@
 \makeatother
 
 
-\title{The Global War \newline Against Cancer\huge}
+\title{Gender birth rate trend analysis \newline in the United States\huge}
 
 %% MONASH STUFF
 
@@ -230,7 +230,7 @@
 \DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 \makeatother
 
-\author{\sf{\Large\textbf{Arindam Baruah}\\\large \href{mailto:abar0090@student.monash.edu}{\nolinkurl{abar0090@student.monash.edu}}\\[0.5cm]}}
+\author{\sf{\Large\textbf{Arindam Baruah}\\\large \href{mailto:abar0090@student.monash.edu}{\nolinkurl{abar0090@student.monash.edu}} (32779267)\\[0.5cm]}}
 
 \date{\sf\Date~\Month~\Year}
 \makeatletter
@@ -327,20 +327,6 @@
 \setstretch{1.5}
 
 %% Any special functions or other packages can be loaded here.
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
-\usepackage{xcolor}
 
 
 \begin{document}
@@ -511,6 +497,34 @@ Let us try to visualise the same through figure \ref{fig:figbirth}.
 \normalsize
 
 As we can observe through figure \ref{fig:figbirth}, the magnitude of births are observed to be \textbf{significantly higher during the period between 1940-2002} when compared to the period between 1620-1710.
+
+\hypertarget{query-2}{%
+\subsection{Query 2}\label{query-2}}
+
+In this section, the number of births classified as ``girls'' will be focused on to gain further insights.
+
+\scriptsize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pl3 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_present, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ girls)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1940{-}2002 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+\NormalTok{pl4 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_arb, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ girls)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1629{-}1710 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+\FunctionTok{plot\_grid}\NormalTok{(pl3,pl4,}\AttributeTok{ncol =}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics{Arindom_Baruah_32779267_files/figure-latex/girlbirth-1} 
+
+}
+
+\caption{Girls born during each period in the US}\label{fig:girlbirth}
+\end{figure}
 
 \printbibliography
 
