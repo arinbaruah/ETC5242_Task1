@@ -327,6 +327,20 @@
 \setstretch{1.5}
 
 %% Any special functions or other packages can be loaded here.
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 
 
 \begin{document}
@@ -501,18 +515,22 @@ As we can observe through figure \ref{fig:figbirth}, the magnitude of births are
 \hypertarget{query-2}{%
 \subsection{Query 2}\label{query-2}}
 
-In this section, the number of births classified as ``girls'' will be focused on to gain further insights.
+In this section, the number of births classified as ``girls'' will be focused on to gain further insights through a scatter plot as visualised through figure \ref{fig:girlbirth}.
 
-\scriptsize
+\tiny
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{pl3 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_present, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ girls)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1940{-}2002 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1940{-}2002 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }
+                                                                           \AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
 \NormalTok{pl4 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_arb, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ girls)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1629{-}1710 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1629{-}1710 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }
+                                                                           \AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
 \FunctionTok{plot\_grid}\NormalTok{(pl3,pl4,}\AttributeTok{ncol =}\DecValTok{1}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -524,6 +542,115 @@ In this section, the number of births classified as ``girls'' will be focused on
 }
 
 \caption{Girls born during each period in the US}\label{fig:girlbirth}
+\end{figure}
+\normalsize
+
+\hypertarget{query-3}{%
+\subsection{Query 3}\label{query-3}}
+
+Based on the analysis of figures \ref{fig:girlbirth} and \ref{fig:pres}, we can observe the following key points:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The magnitude of girls born in the period between 1940-2002 is \textbf{significantly higher} than in the period between 1629-1710.
+\item
+  During the period between 1940-1960, there was \textbf{a consistent increase in the number of girls born in the country}.
+\item
+  The period between 1960-1975 observed a \textbf{sudden drop in the number of girls born}.
+\item
+  However, the number of girls born were \textbf{back on the rise} after the year 1975.
+\item
+  Between the period of 1990-2000, the \textbf{number of girls born were observed to stagnate at approximately 2000000 births a year}.
+\end{enumerate}
+
+\tiny
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pl5 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_present, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ girls)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{shape =} \DecValTok{2}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Number of girls born during 1940{-}2002 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in the US"}\NormalTok{) }\SpecialCharTok{+}
+   \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{), }
+                                                    \AttributeTok{aspect.ratio =} \FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"segment"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1945}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1900000}\NormalTok{,}
+    \AttributeTok{xend =} \DecValTok{1950}\NormalTok{  ,}
+    \AttributeTok{yend =} \DecValTok{1800000}\NormalTok{,}
+    \AttributeTok{arrow =} \FunctionTok{arrow}\NormalTok{(}\AttributeTok{type =} \StringTok{"closed"}\NormalTok{,}
+                  \AttributeTok{length =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.02}\NormalTok{, }\StringTok{"npc"}\NormalTok{))}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"text"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1946}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1980000}\NormalTok{,}
+    \AttributeTok{colour =} \StringTok{"black"}\NormalTok{,}
+    \AttributeTok{label =} \StringTok{\textquotesingle{}Consistent rise in number of girls }\SpecialCharTok{\textbackslash{}n}\StringTok{ born between 1940{-}1960\textquotesingle{}}\NormalTok{,}
+    \AttributeTok{size =} \FunctionTok{unit}\NormalTok{(}\FloatTok{2.5}\NormalTok{, }\StringTok{"pt"}\NormalTok{)}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"segment"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1965}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1300000}\NormalTok{,}
+    \AttributeTok{xend =} \DecValTok{1973}\NormalTok{  ,}
+    \AttributeTok{yend =} \DecValTok{1500000}\NormalTok{,}
+    \AttributeTok{arrow =} \FunctionTok{arrow}\NormalTok{(}\AttributeTok{type =} \StringTok{"closed"}\NormalTok{,}
+                  \AttributeTok{length =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.02}\NormalTok{, }\StringTok{"npc"}\NormalTok{))}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"text"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1965}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1250000}\NormalTok{,}
+    \AttributeTok{colour =} \StringTok{"blue"}\NormalTok{,}
+    \AttributeTok{label =} \StringTok{\textquotesingle{}Dip in number of girls born }\SpecialCharTok{\textbackslash{}n}\StringTok{ between 1960{-}1975\textquotesingle{}}\NormalTok{,}
+    \AttributeTok{size =} \FunctionTok{unit}\NormalTok{(}\FloatTok{2.5}\NormalTok{, }\StringTok{"pt"}\NormalTok{)}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"segment"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1983}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1500000}\NormalTok{,}
+    \AttributeTok{xend =} \DecValTok{1985}\NormalTok{  ,}
+    \AttributeTok{yend =} \DecValTok{1700000}\NormalTok{,}
+    \AttributeTok{arrow =} \FunctionTok{arrow}\NormalTok{(}\AttributeTok{type =} \StringTok{"closed"}\NormalTok{,}
+                  \AttributeTok{length =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.02}\NormalTok{, }\StringTok{"npc"}\NormalTok{))}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"text"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1985}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1450000}\NormalTok{,}
+    \AttributeTok{colour =} \StringTok{"darkgreen"}\NormalTok{,}
+    \AttributeTok{label =} \StringTok{\textquotesingle{}Girl child births start }\SpecialCharTok{\textbackslash{}n}\StringTok{ increasing again\textquotesingle{}}\NormalTok{,}
+    \AttributeTok{size =} \FunctionTok{unit}\NormalTok{(}\FloatTok{2.5}\NormalTok{, }\StringTok{"pt"}\NormalTok{)}
+\NormalTok{  ) }\SpecialCharTok{+}
+    \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"segment"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1995}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1700000}\NormalTok{,}
+    \AttributeTok{xend =} \DecValTok{1995}\NormalTok{  ,}
+    \AttributeTok{yend =} \DecValTok{1850000}\NormalTok{,}
+    \AttributeTok{arrow =} \FunctionTok{arrow}\NormalTok{(}\AttributeTok{type =} \StringTok{"closed"}\NormalTok{,}
+                  \AttributeTok{length =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.02}\NormalTok{, }\StringTok{"npc"}\NormalTok{))}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{annotate}\NormalTok{(}
+    \StringTok{"text"}\NormalTok{,}
+    \AttributeTok{x =} \DecValTok{1995}\NormalTok{,}
+    \AttributeTok{y =} \DecValTok{1600000}\NormalTok{,}
+    \AttributeTok{colour =} \StringTok{"darkred"}\NormalTok{,}
+    \AttributeTok{label =} \StringTok{\textquotesingle{}Stagnation in the number }\SpecialCharTok{\textbackslash{}n}\StringTok{ of girls born after 1990\textquotesingle{}}\NormalTok{,}
+    \AttributeTok{size =} \FunctionTok{unit}\NormalTok{(}\FloatTok{2.5}\NormalTok{, }\StringTok{"pt"}\NormalTok{)}
+\NormalTok{  )  }
+\NormalTok{pl5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+\includegraphics{Arindom_Baruah_32779267_files/figure-latex/pres-1} \hfill{}
+
+\caption{Trend analysis of girls child births in The United States during 1940-2002}\label{fig:pres}
 \end{figure}
 
 \printbibliography
