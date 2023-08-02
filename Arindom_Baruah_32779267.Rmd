@@ -38,6 +38,7 @@ library(here)
 library(rmarkdown)
 library(knitr)
 library(cowplot)
+library(kableExtra)
 ```
 
 
@@ -71,7 +72,9 @@ The current section will provide a step by step analysis for each of the formula
 A basic understanding on the size of the data and the number of entries for the datasets belonging to each of the two time periods will be explored in this section.
 
 ```{r echo=TRUE,include=TRUE}
-head(df_present)
+head(df_present) %>% kable() %>% 
+  kable_styling(bootstrap_options = c("bordered","hover"),
+                                    latex_options = "HOLD_position") 
 ```
 
 The above code-chunk and its output provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
@@ -84,8 +87,12 @@ Let us observe how do the values of the number of births between the periods of 
 
 \scriptsize
 ```{r echo=TRUE,include=TRUE}
-summary(df_present)
-summary(df_arb)
+summary(df_present) %>% kable() %>% 
+  kable_styling(bootstrap_options = c("bordered","hover"),
+                                    latex_options = "HOLD_position") 
+summary(df_arb) %>% kable() %>% 
+  kable_styling(bootstrap_options = c("bordered","hover"),
+                                    latex_options = "HOLD_position") 
 ```
 \normalsize
 
@@ -267,7 +274,9 @@ df_present <- df_present %>% mutate(Total = boys + girls) %>%
   mutate(Prop_girls = girls/Total) %>% 
   mutate(Prop_boys = boys/Total)
 
-head(df_present)
+head(df_present) %>% kable() %>% 
+  kable_styling(bootstrap_options = c("bordered","hover"),
+                                    latex_options = "HOLD_position") 
 ```
 \normalsize
 

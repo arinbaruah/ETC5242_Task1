@@ -327,6 +327,20 @@
 \setstretch{1.5}
 
 %% Any special functions or other packages can be loaded here.
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 
 
 \begin{document}
@@ -375,21 +389,32 @@ A basic understanding on the size of the data and the number of entries for the 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(df\_present)}
+\FunctionTok{head}\NormalTok{(df\_present) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{kable}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"bordered"}\NormalTok{,}\StringTok{"hover"}\NormalTok{),}
+                                    \AttributeTok{latex\_options =} \StringTok{"HOLD\_position"}\NormalTok{) }
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## # A tibble: 6 x 3
-##    year    boys   girls
-##   <dbl>   <dbl>   <dbl>
-## 1  1940 1211684 1148715
-## 2  1941 1289734 1223693
-## 3  1942 1444365 1364631
-## 4  1943 1508959 1427901
-## 5  1944 1435301 1359499
-## 6  1945 1404587 1330869
-\end{verbatim}
+\begin{table}[H]
+\centering
+\begin{tabular}{r|r|r}
+\hline
+year & boys & girls\\
+\hline
+1940 & 1211684 & 1148715\\
+\hline
+1941 & 1289734 & 1223693\\
+\hline
+1942 & 1444365 & 1364631\\
+\hline
+1943 & 1508959 & 1427901\\
+\hline
+1944 & 1435301 & 1359499\\
+\hline
+1945 & 1404587 & 1330869\\
+\hline
+\end{tabular}
+\end{table}
 
 The above code-chunk and its output provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
 
@@ -409,36 +434,61 @@ Let us observe how do the values of the number of births between the periods of 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{summary}\NormalTok{(df\_present)}
+\FunctionTok{summary}\NormalTok{(df\_present) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{kable}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"bordered"}\NormalTok{,}\StringTok{"hover"}\NormalTok{),}
+                                    \AttributeTok{latex\_options =} \StringTok{"HOLD\_position"}\NormalTok{) }
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-##       year           boys             girls        
-##  Min.   :1940   Min.   :1211684   Min.   :1148715  
-##  1st Qu.:1956   1st Qu.:1799857   1st Qu.:1711404  
-##  Median :1971   Median :1924868   Median :1831679  
-##  Mean   :1971   Mean   :1885600   Mean   :1793915  
-##  3rd Qu.:1986   3rd Qu.:2058524   3rd Qu.:1965538  
-##  Max.   :2002   Max.   :2186274   Max.   :2082052
-\end{verbatim}
+\begin{table}[H]
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+  &      year &      boys &     girls\\
+\hline
+ & Min.   :1940 & Min.   :1211684 & Min.   :1148715\\
+\hline
+ & 1st Qu.:1956 & 1st Qu.:1799857 & 1st Qu.:1711404\\
+\hline
+ & Median :1971 & Median :1924868 & Median :1831679\\
+\hline
+ & Mean   :1971 & Mean   :1885600 & Mean   :1793915\\
+\hline
+ & 3rd Qu.:1986 & 3rd Qu.:2058524 & 3rd Qu.:1965538\\
+\hline
+ & Max.   :2002 & Max.   :2186274 & Max.   :2082052\\
+\hline
+\end{tabular}
+\end{table}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{summary}\NormalTok{(df\_arb)}
+\FunctionTok{summary}\NormalTok{(df\_arb) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{kable}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"bordered"}\NormalTok{,}\StringTok{"hover"}\NormalTok{),}
+                                    \AttributeTok{latex\_options =} \StringTok{"HOLD\_position"}\NormalTok{) }
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-##       year           boys          girls     
-##  Min.   :1629   Min.   :2890   Min.   :2722  
-##  1st Qu.:1649   1st Qu.:4759   1st Qu.:4457  
-##  Median :1670   Median :6073   Median :5718  
-##  Mean   :1670   Mean   :5907   Mean   :5535  
-##  3rd Qu.:1690   3rd Qu.:7576   3rd Qu.:7150  
-##  Max.   :1710   Max.   :8426   Max.   :7779
-\end{verbatim}
-
+\begin{table}[H]
+\centering
+\begin{tabular}{l|l|l|l}
+\hline
+  &      year &      boys &     girls\\
+\hline
+ & Min.   :1629 & Min.   :2890 & Min.   :2722\\
+\hline
+ & 1st Qu.:1649 & 1st Qu.:4759 & 1st Qu.:4457\\
+\hline
+ & Median :1670 & Median :6073 & Median :5718\\
+\hline
+ & Mean   :1670 & Mean   :5907 & Mean   :5535\\
+\hline
+ & 3rd Qu.:1690 & 3rd Qu.:7576 & 3rd Qu.:7150\\
+\hline
+ & Max.   :1710 & Max.   :8426 & Max.   :7779\\
+\hline
+\end{tabular}
+\end{table}
 \normalsize
 
 As we can clearly observe, the \textbf{magnitude of the boys and girls born during the period of 1940-2002 are much larger than that for the period of 1629-1710}. This is expected as a result of the global rise of population owing to factors such as better infrastructure, better lifestyle, better socio-economic factors and improvement in medical sciences.
@@ -674,22 +724,32 @@ The above new features will be calculated through the following code chunk.
   \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Prop\_girls =}\NormalTok{ girls}\SpecialCharTok{/}\NormalTok{Total) }\SpecialCharTok{\%\textgreater{}\%} 
   \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Prop\_boys =}\NormalTok{ boys}\SpecialCharTok{/}\NormalTok{Total)}
 
-\FunctionTok{head}\NormalTok{(df\_present)}
+\FunctionTok{head}\NormalTok{(df\_present) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{kable}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"bordered"}\NormalTok{,}\StringTok{"hover"}\NormalTok{),}
+                                    \AttributeTok{latex\_options =} \StringTok{"HOLD\_position"}\NormalTok{) }
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## # A tibble: 6 x 7
-##    year    boys   girls   Total Ratio Prop_girls Prop_boys
-##   <dbl>   <dbl>   <dbl>   <dbl> <dbl>      <dbl>     <dbl>
-## 1  1940 1211684 1148715 2360399 0.948      0.487     0.513
-## 2  1941 1289734 1223693 2513427 0.949      0.487     0.513
-## 3  1942 1444365 1364631 2808996 0.945      0.486     0.514
-## 4  1943 1508959 1427901 2936860 0.946      0.486     0.514
-## 5  1944 1435301 1359499 2794800 0.947      0.486     0.514
-## 6  1945 1404587 1330869 2735456 0.948      0.487     0.513
-\end{verbatim}
-
+\begin{table}[H]
+\centering
+\begin{tabular}{r|r|r|r|r|r|r}
+\hline
+year & boys & girls & Total & Ratio & Prop\_girls & Prop\_boys\\
+\hline
+1940 & 1211684 & 1148715 & 2360399 & 0.9480318 & 0.4866614 & 0.5133386\\
+\hline
+1941 & 1289734 & 1223693 & 2513427 & 0.9487949 & 0.4868624 & 0.5131376\\
+\hline
+1942 & 1444365 & 1364631 & 2808996 & 0.9447965 & 0.4858074 & 0.5141926\\
+\hline
+1943 & 1508959 & 1427901 & 2936860 & 0.9462822 & 0.4861999 & 0.5138001\\
+\hline
+1944 & 1435301 & 1359499 & 2794800 & 0.9471874 & 0.4864387 & 0.5135613\\
+\hline
+1945 & 1404587 & 1330869 & 2735456 & 0.9475162 & 0.4865255 & 0.5134745\\
+\hline
+\end{tabular}
+\end{table}
 \normalsize
 
 \hypertarget{query-5}{%
