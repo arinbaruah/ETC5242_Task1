@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  2 AUG 2023 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  2 AUG 2023 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1730,7 +1730,15 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
-[12] (./Arindom_Baruah_32779267.aux)
+[12]
+
+Package fancyhdr Warning: \headheight is too small (15.0pt): 
+(fancyhdr)                Make it at least 24.74995pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.74995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
+
+[13] (./Arindom_Baruah_32779267.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1742,18 +1750,18 @@ Package logreq Info: Writing requests to 'Arindom_Baruah_32779267.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28549 strings out of 477197
- 490995 string characters out of 5812768
+ 28559 strings out of 477197
+ 491101 string characters out of 5812768
  1934244 words of memory out of 5000000
  48706 multiletter control sequences out of 15000+600000
- 685269 words of font info for 350 fonts, out of 8000000 for 9000
+ 685827 words of font info for 356 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,14n,93p,1043b,1565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb>
-Output written on Arindom_Baruah_32779267.pdf (12 pages, 563927 bytes).
+Output written on Arindom_Baruah_32779267.pdf (13 pages, 565210 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
  94334 words of extra memory for PDF output out of 106986 (max. 10000000)
 

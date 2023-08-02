@@ -26,7 +26,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache=TRUE, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo = FALSE, cache=FALSE, message=FALSE, warning=FALSE)
 ```
 
 ```{r libraries}
@@ -336,3 +336,4 @@ The above analysis was undertaken with the help of the following software and pa
 6. __rmarkdown__: Allaire J, Xie Y, Dervieux C, McPherson J, Luraschi J, Ushey K, Atkins A, Wickham H, Cheng J, Chang W, Iannone R (2023). _rmarkdown: Dynamic Documents for R_.
   R package version 2.23, <https://github.com/rstudio/rmarkdown>.
 7. __cowplot__: Wilke C (2020). _cowplot: Streamlined Plot Theme and Plot Annotations for 'ggplot2'_. R package version 1.1.1, <https://CRAN.R-project.org/package=cowplot>.
+8. __kableExtra__: Zhu H (2023). _kableExtra: Construct Complex Table with 'kable' and Pipe Syntax_. http://haozhu233.github.io/kableExtra
