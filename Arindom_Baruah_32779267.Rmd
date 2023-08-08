@@ -78,29 +78,34 @@ The current section will provide a step by step analysis for each of the formula
 
 A basic understanding on the size of the data and the number of entries for the datasets belonging to each of the two time periods will be explored in this section.
 
-```{r echo=TRUE,include=TRUE}
-head(df_present) %>% kable() %>% 
+```{r tabpre, echo=TRUE,include=TRUE}
+head(df_present) %>% kable(caption = "Preview of the data containing number of boys and girls born in The United States between 1940-2002.") %>% 
   kable_styling(bootstrap_options = c("bordered","hover"),
                                     latex_options = "HOLD_position") 
 ```
 
-The above code-chunk and its output provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
+The above code-chunk and its output as observed through table \ref{tab:tabpre} provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
 
 - __Year__ : The year pertaining to the count of new births in the United States.
 - __boys__ : The number of births classified as "boys" for the corresponding year.
 - __girls__ : The number of births classified as "girls" for the corresponding year.
 
-Let us observe how do the values of the number of births between the periods of 1629-1710 and 1940-2002 vary from one another.
+Let us observe how do the values of the number of births between the periods of 1629-1710 and 1940-2002 vary from one another through tables \ref{tab:sumstatarb} and \ref{tab:sumstatpre} respectively.
 
 \scriptsize
-```{r echo=TRUE,include=TRUE}
-summary(df_present) %>% kable() %>% 
-  kable_styling(bootstrap_options = c("bordered","hover"),
-                                    latex_options = "HOLD_position") 
-summary(df_arb) %>% kable() %>% 
+```{r sumstatarb,echo=TRUE,include=TRUE}
+summary(df_arb) %>% kable(caption = "Summary statistics for data between 1629-1710.") %>% 
   kable_styling(bootstrap_options = c("bordered","hover"),
                                     latex_options = "HOLD_position") 
 ```
+
+
+```{r sumstatpre, echo=TRUE,include=TRUE}
+summary(df_present) %>% kable(caption = "Summary statistics for data between 1940-2002.") %>% 
+  kable_styling(bootstrap_options = c("bordered","hover"),
+                                    latex_options = "HOLD_position") 
+```
+
 \normalsize
 
 As we can clearly observe, the __magnitude of the boys and girls born during the period of 1940-2002 are much larger than that for the period of 1629-1710__. This is expected as a result of the global rise of population owing to factors such as better infrastructure, better lifestyle, better socio-economic factors and  improvement in medical sciences.
@@ -271,17 +276,17 @@ While the raw dataset provides an overall understanding of the gender birth numb
 3. __Prop_girls__: This feature maybe defined as the ratio of the number of girls born to the total number of children born for a particular year.
 4. __Prop_boys__: This feature maybe defined as the ratio of the number of boys born to the total number of children born for a particular year.
 
-The above new features will be calculated through the following code chunk.
+The above new features will be calculated through the following code chunk below and the data has been tabulated in table \ref{tab:feateng}.
 
 \tiny
-```{r echo=TRUE}
+```{r feateng, echo=TRUE}
 
 df_present <- df_present %>% mutate(Total = boys + girls) %>% 
   mutate(Ratio = girls/boys) %>% 
   mutate(Prop_girls = girls/Total) %>% 
   mutate(Prop_boys = boys/Total)
 
-head(df_present) %>% kable() %>% 
+head(df_present) %>% kable(caption = "Addition of new features in the data for births between 1940-2002.") %>% 
   kable_styling(bootstrap_options = c("bordered","hover"),
                                     latex_options = "HOLD_position") 
 ```
@@ -318,7 +323,6 @@ pl6
 
 Figure \ref{fig:propboys} suggests that the proportion of boys and consequently, the number of boys born in the United States during the period between 1940-2002 is __indeed greater than the proportion of girls born in the same time period__. As a result, the observations pertaining to the birth statistics of the United States between the period of 1940-2002 __closely corroborates__ with the findings of @arbuthnot1710ii during the period of 1629-1710.
 
-\newpage
 # Conclusion
 
 The key takeaways from the above analysis are as follows:
@@ -327,7 +331,6 @@ The key takeaways from the above analysis are as follows:
 2. Statistics pertaining to female child birth were observed to undergo a sudden dip and then subsequently rise and stagnate for both the time periods. Hence, the two time periods were observed to report similarities in its trend.
 3. Proportion of male child birth continue to be greater than female child birth in The United States during the period of 1940-2002. A similar observation  was first reported by @arbuthnot1710ii for the period of 1629-1710.
 
-\newpage
 # Resources
 
 The above analysis was undertaken with the help of the following software and packages:
