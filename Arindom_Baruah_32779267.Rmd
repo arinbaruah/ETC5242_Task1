@@ -25,12 +25,14 @@ output:
     toc: true
 ---
 
+
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache=FALSE, message=FALSE, warning=FALSE)
 ```
 
 ```{r libraries}
-
 library(ggplot2)
 library(knitr)
 library(tidyverse)
@@ -39,6 +41,11 @@ library(rmarkdown)
 library(knitr)
 library(cowplot)
 library(kableExtra)
+
+# The current Rmd file utilises the Monash Business and Economics latex template. 
+# Kindly install the package by removing the comment below.
+
+# remotes::install_github("numbats/monash")
 ```
 
 
