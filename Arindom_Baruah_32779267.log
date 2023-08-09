@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  8 AUG 2023 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  9 AUG 2023 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1498,29 +1498,48 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
 [2{/Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}]
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 390.
 
-Package xcolor Warning: Incompatible color definition on input line 392.
+Package xcolor Warning: Incompatible color definition on input line 390.
 
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 5.06396pt on input line 393.
+(Font)              scaled to size 9.24173pt on input line 391.
 LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 5.06396pt on input line 394.
+(Font)              scaled to size 9.24173pt on input line 392.
 
-Package xcolor Warning: Incompatible color definition on input line 399.
+Package xcolor Warning: Incompatible color definition on input line 394.
 
 
-Package xcolor Warning: Incompatible color definition on input line 399.
+Package xcolor Warning: Incompatible color definition on input line 394.
 
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 403.
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 430.
+
+Overfull \hbox (0.96475pt too wide) in paragraph at lines 402--402
+[]\T1/fvm/m/n/10.95 ## $ year  <dbl> 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950~[] 
+ []
+
+
+Overfull \hbox (0.96475pt too wide) in paragraph at lines 402--402
+[]\T1/fvm/m/n/10.95 ## $ boys  <dbl> 1211684, 1289734, 1444365, 1508959, 1435301, 1404587, 1691220, 1~[] 
+ []
+
+
+Overfull \hbox (0.96475pt too wide) in paragraph at lines 402--402
+[]\T1/fvm/m/n/10.95 ## $ girls <dbl> 1148715, 1223693, 1364631, 1427901, 1359499, 1330869, 1597452, 1~[] 
+ []
+
+
+LaTeX Warning: Reference `tab:tabpre' on page 3 undefined on input line 406.
+
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 411.
 (/Users/rinbaruah/Library/TinyTeX/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 430.
+(Font)              scaled to size 10.51207pt on input line 411.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 420.
+
+Package xcolor Warning: Incompatible color definition on input line 422.
+
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
 (fancyhdr)                Make it at least 24.74995pt, for example:
@@ -1529,26 +1548,42 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
 [3]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 5.06396pt on input line 423.
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 5.06396pt on input line 424.
 
-Package xcolor Warning: Incompatible color definition on input line 441.
-
-
-Package xcolor Warning: Incompatible color definition on input line 447.
-
-
-Package xcolor Warning: Incompatible color definition on input line 447.
+Package xcolor Warning: Incompatible color definition on input line 428.
 
 
-Package xcolor Warning: Incompatible color definition on input line 472.
+Package xcolor Warning: Incompatible color definition on input line 428.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 432.
+
+Package xcolor Warning: Incompatible color definition on input line 453.
 
 
-Package xcolor Warning: Incompatible color definition on input line 478.
+Package xcolor Warning: Incompatible color definition on input line 459.
 
 
-Package xcolor Warning: Incompatible color definition on input line 478.
+Package xcolor Warning: Incompatible color definition on input line 459.
 
 
-Package xcolor Warning: Incompatible color definition on input line 511.
+Package xcolor Warning: Incompatible color definition on input line 492.
+
+LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <6> not available
+(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 494.
+LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
+(Font)              scaled to size 5.06396pt on input line 494.
+
+Package xcolor Warning: Incompatible color definition on input line 528.
+
+
+Package xcolor Warning: Incompatible color definition on input line 528.
+
+
+Package xcolor Warning: Incompatible color definition on input line 528.
 
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
@@ -1558,45 +1593,44 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
 [4]
-LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <6> not available
-(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 513.
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 5.06396pt on input line 513.
-LaTeX Font Info:    Trying to load font information for TS1+fvm on input line 524.
+
+Package xcolor Warning: Incompatible color definition on input line 528.
+
+
+Package xcolor Warning: Incompatible color definition on input line 528.
+
+<Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf, id=115, 454.69875pt x 350.30875pt>
+File: Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf Graphic file (type pdf)
+<use Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf>
+Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf  used on input line 532.
+(pdftex.def)             Requested size: 454.69763pt x 350.30789pt.
+
+Package fancyhdr Warning: \headheight is too small (15.0pt): 
+(fancyhdr)                Make it at least 24.74995pt, for example:
+(fancyhdr)                \setlength{\headheight}{24.74995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
+
+[5 <./Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 550.
+
+LaTeX Font Info:    Trying to load font information for TS1+fvm on input line 553.
 (/Users/rinbaruah/Library/TinyTeX/texmf-dist/tex/latex/bera/ts1fvm.fd
 File: ts1fvm.fd 2004/09/07 scalable font definitions for TS1/fvm.
 )
 LaTeX Font Info:    Font shape `TS1/fvm/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 524.
+(Font)              scaled to size 5.39996pt on input line 553.
 
-Package xcolor Warning: Incompatible color definition on input line 547.
-
-
-Package xcolor Warning: Incompatible color definition on input line 547.
-
-<Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf, id=116, 457.71pt x 350.30875pt>
-File: Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf Graphic file (type pdf)
-<use Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf>
-Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf  used on input line 551.
-(pdftex.def)             Requested size: 457.7089pt x 350.30789pt.
-
-Overfull \hbox (2.46481pt too wide) in paragraph at lines 551--552
- [][] 
- []
+Package xcolor Warning: Incompatible color definition on input line 564.
 
 
-Package xcolor Warning: Incompatible color definition on input line 569.
+Package xcolor Warning: Incompatible color definition on input line 564.
 
-
-Package xcolor Warning: Incompatible color definition on input line 583.
-
-
-Package xcolor Warning: Incompatible color definition on input line 583.
-
-<Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf, id=119, 290.08376pt x 349.305pt>
+<Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf, id=130, 290.08376pt x 349.305pt>
 File: Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf Graphic file (type pdf)
 <use Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf>
-Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf  used on input line 587.
+Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf  used on input line 568.
 (pdftex.def)             Requested size: 290.08304pt x 349.30414pt.
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
@@ -1605,34 +1639,18 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
-[5]
+[6 <./Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 621.
-
-
-Package fancyhdr Warning: \headheight is too small (15.0pt): 
-(fancyhdr)                Make it at least 24.74995pt, for example:
-(fancyhdr)                \setlength{\headheight}{24.74995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
-
-[6 <./Arindom_Baruah_32779267_files/figure-latex/figbirth-1.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 602.
 
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 679.
 
 
-Underfull \vbox (badness 10000) detected at line 698
- []
+Package xcolor Warning: Incompatible color definition on input line 679.
 
 
-Underfull \vbox (badness 10000) detected at line 698
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 679.
 
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
@@ -1641,25 +1659,25 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-9.74995pt}.
 
-[7 <./Arindom_Baruah_32779267_files/figure-latex/girlbirth-1.pdf>]
+[7]
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 679.
 
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 679.
 
-<Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf, id=162, 471.7625pt x 349.305pt>
+<Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf, id=160, 471.7625pt x 349.305pt>
 File: Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf Graphic file (type pdf)
 <use Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf>
-Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf  used on input line 702.
+Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf  used on input line 683.
 (pdftex.def)             Requested size: 471.76134pt x 349.30414pt.
 
-Overfull \hbox (16.51726pt too wide) in paragraph at lines 702--703
+Overfull \hbox (16.51726pt too wide) in paragraph at lines 683--684
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
 
  []
 
@@ -1672,7 +1690,7 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 
 [8]
 
-Package xcolor Warning: Incompatible color definition on input line 731.
+Package xcolor Warning: Incompatible color definition on input line 712.
 
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
@@ -1683,24 +1701,24 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 
 [9 <./Arindom_Baruah_32779267_files/figure-latex/pres-1.pdf>]
 
-Package xcolor Warning: Incompatible color definition on input line 742.
+Package xcolor Warning: Incompatible color definition on input line 723.
 
 
-Package xcolor Warning: Incompatible color definition on input line 742.
+Package xcolor Warning: Incompatible color definition on input line 723.
 
 
-Package xcolor Warning: Incompatible color definition on input line 775.
+Package xcolor Warning: Incompatible color definition on input line 756.
 
 
-Package xcolor Warning: Incompatible color definition on input line 796.
+Package xcolor Warning: Incompatible color definition on input line 777.
 
 
-Package xcolor Warning: Incompatible color definition on input line 796.
+Package xcolor Warning: Incompatible color definition on input line 777.
 
-<Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf, id=184, 329.23pt x 349.305pt>
+<Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf, id=182, 329.23pt x 349.305pt>
 File: Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf Graphic file (type pdf)
 <use Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf>
-Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf  used on input line 800.
+Package pdftex.def Info: Arindom_Baruah_32779267_files/figure-latex/propboys-1.pdf  used on input line 781.
 (pdftex.def)             Requested size: 329.22919pt x 349.30414pt.
 
 Package fancyhdr Warning: \headheight is too small (15.0pt): 
@@ -1738,6 +1756,9 @@ Package fancyhdr Warning: \headheight is too small (15.0pt):
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Arindom_Baruah_32779267.out' has not changed.
 (rerunfilecheck)             Checksum: EF113A957C5A036A8DD90DE053BBF41A;1149.
 Package logreq Info: Writing requests to 'Arindom_Baruah_32779267.run.xml'.
@@ -1745,18 +1766,18 @@ Package logreq Info: Writing requests to 'Arindom_Baruah_32779267.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28563 strings out of 477197
- 491098 string characters out of 5812768
- 1934244 words of memory out of 5000000
- 48702 multiletter control sequences out of 15000+600000
- 681962 words of font info for 357 fonts, out of 8000000 for 9000
+ 28570 strings out of 477197
+ 491237 string characters out of 5812768
+ 1935244 words of memory out of 5000000
+ 48708 multiletter control sequences out of 15000+600000
+ 683202 words of font info for 361 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,14n,93p,1079b,1565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb></Users/rinbaruah/Library/TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb>
-Output written on Arindom_Baruah_32779267.pdf (13 pages, 567012 bytes).
+Output written on Arindom_Baruah_32779267.pdf (13 pages, 561994 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
  92286 words of extra memory for PDF output out of 106986 (max. 10000000)
 

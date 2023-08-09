@@ -78,12 +78,9 @@ The current section will provide a step by step analysis for each of the formula
 
 A basic understanding on the size of the data and the number of entries for the datasets belonging to each of the two time periods will be explored in this section.
 
-\tiny
+
 ```{r tabpre, echo=TRUE,include=TRUE}
-head(df_present) %>% 
-  kable(caption = "Preview of the data containing number of boys and girls born in The United States between 1940-2002.") %>% 
-  kable_styling(bootstrap_options = c("bordered","hover"),
-                                    latex_options = "HOLD_position") 
+glimpse(df_present)  
 ```
 \normalsize
 The above code-chunk and its output as observed through table \ref{tab:tabpre} provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
@@ -127,11 +124,11 @@ df_arb_long <-
     cols = c(boys, girls)
   )
 pl1 <-
-  ggplot(data = df_arb_long, aes(x = year, y = born, fill = gender)) + 
-  geom_area(color = 'black') + theme_classic() + 
+  ggplot(data = df_arb_long, aes(x = year, y = born, color = gender)) + 
+  geom_line() + theme_classic() + 
   ggtitle("Birth statistics between 1629-1710") + 
   theme(plot.title = element_text(hjust = 0.5),aspect.ratio = 0.5) + 
-  labs(fill = "Gender", x = "Year", y = "Number of births")
+  labs(color = "Gender", x = "Year", y = "Number of births")
 
 
 df_present_long <-
@@ -142,12 +139,12 @@ df_present_long <-
     cols = c(boys, girls)
   )
 pl2 <-
-  ggplot(data = df_present_long, aes(x = year, y = born, fill = gender)) + 
-  geom_area(color = 'black') + 
+  ggplot(data = df_present_long, aes(x = year, y = born, color = gender)) + 
+  geom_line() + 
   theme_classic() + 
   ggtitle("Birth statistics between 1940-2002 \n in The US") + 
   theme(plot.title = element_text(hjust = 0.5),aspect.ratio = 0.5) + 
-  labs(fill = "Gender", x = "Year", y = "Number of births")
+  labs(color = "Gender", x = "Year", y = "Number of births")
 
 plot_grid(pl1, pl2, labels = "AUTO", ncol = 1)
 ```

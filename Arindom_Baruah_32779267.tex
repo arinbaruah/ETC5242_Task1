@@ -387,39 +387,20 @@ The current section will provide a step by step analysis for each of the formula
 
 A basic understanding on the size of the data and the number of entries for the datasets belonging to each of the two time periods will be explored in this section.
 
-\tiny
-
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(df\_present) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{kable}\NormalTok{(}\AttributeTok{caption =} \StringTok{"Preview of the data containing number of boys and girls born in The United States between 1940{-}2002."}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{"bordered"}\NormalTok{,}\StringTok{"hover"}\NormalTok{),}
-                                    \AttributeTok{latex\_options =} \StringTok{"HOLD\_position"}\NormalTok{) }
+\FunctionTok{glimpse}\NormalTok{(df\_present)  }
 \end{Highlighting}
 \end{Shaded}
 
-\begin{table}[H]
+\begin{verbatim}
+## Rows: 63
+## Columns: 3
+## $ year  <dbl> 1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950~
+## $ boys  <dbl> 1211684, 1289734, 1444365, 1508959, 1435301, 1404587, 1691220, 1~
+## $ girls <dbl> 1148715, 1223693, 1364631, 1427901, 1359499, 1330869, 1597452, 1~
+\end{verbatim}
 
-\caption{\label{tab:tabpre}Preview of the data containing number of boys and girls born in The United States between 1940-2002.}
-\centering
-\begin{tabular}[t]{r|r|r}
-\hline
-year & boys & girls\\
-\hline
-1940 & 1211684 & 1148715\\
-\hline
-1941 & 1289734 & 1223693\\
-\hline
-1942 & 1444365 & 1364631\\
-\hline
-1943 & 1508959 & 1427901\\
-\hline
-1944 & 1435301 & 1359499\\
-\hline
-1945 & 1404587 & 1330869\\
-\hline
-\end{tabular}
-\end{table}
 \normalsize
 
 The above code-chunk and its output as observed through table \ref{tab:tabpre} provides us with the glimpse of the dataset. The dataset contains three features. These features are explained as below:
@@ -520,11 +501,11 @@ Let us try to visualise the same through figure \ref{fig:figbirth}.
     \AttributeTok{cols =} \FunctionTok{c}\NormalTok{(boys, girls)}
 \NormalTok{  )}
 \NormalTok{pl1 }\OtherTok{\textless{}{-}}
-  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_arb\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ born, }\AttributeTok{fill =}\NormalTok{ gender)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_area}\NormalTok{(}\AttributeTok{color =} \StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
+  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_arb\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ born, }\AttributeTok{color =}\NormalTok{ gender)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
   \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Birth statistics between 1629{-}1710"}\NormalTok{) }\SpecialCharTok{+} 
   \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Gender"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{color =} \StringTok{"Gender"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
 
 
 \NormalTok{df\_present\_long }\OtherTok{\textless{}{-}}
@@ -535,12 +516,12 @@ Let us try to visualise the same through figure \ref{fig:figbirth}.
     \AttributeTok{cols =} \FunctionTok{c}\NormalTok{(boys, girls)}
 \NormalTok{  )}
 \NormalTok{pl2 }\OtherTok{\textless{}{-}}
-  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_present\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ born, }\AttributeTok{fill =}\NormalTok{ gender)) }\SpecialCharTok{+} 
-  \FunctionTok{geom\_area}\NormalTok{(}\AttributeTok{color =} \StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ df\_present\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ born, }\AttributeTok{color =}\NormalTok{ gender)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+} 
   \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} 
   \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Birth statistics between 1940{-}2002 }\SpecialCharTok{\textbackslash{}n}\StringTok{ in The US"}\NormalTok{) }\SpecialCharTok{+} 
   \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{),}\AttributeTok{aspect.ratio =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} 
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{fill =} \StringTok{"Gender"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{color =} \StringTok{"Gender"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of births"}\NormalTok{)}
 
 \FunctionTok{plot\_grid}\NormalTok{(pl1, pl2, }\AttributeTok{labels =} \StringTok{"AUTO"}\NormalTok{, }\AttributeTok{ncol =} \DecValTok{1}\NormalTok{)}
 \end{Highlighting}
